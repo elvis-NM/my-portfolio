@@ -1,0 +1,178 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}
+Python
+{% endblock title %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<style>
+    #icon01,
+    #icon02,
+    #icon03,
+    #icon04 {
+        display: inline-block;
+        height: 138px;
+        width: 138px;
+    }
+
+    #giticon {
+        display: inline-block;
+
+    }
+
+
+    .subcontent1a {
+
+        border-radius: 25px;
+        margin: 80px 40px 40px 40px;
+        font-size: 22px;
+
+    }
+
+    .subcontent1 .subcontent1a {
+
+        width: 950px;
+        height: 500px;
+        padding: 450px 40x 40px 40px;
+        text-align: left;
+
+
+
+
+    }
+
+
+
+
+
+    @keyframes rotatez {
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    #icon01 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 1s 3 rotatez;
+    }
+
+    #icon02 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 2s 4 rotatez;
+    }
+
+    #icon03 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 3s 5 rotatez;
+    }
+
+    #icon04 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 4s 5 rotatez;
+    }
+</style>
+
+
+<div id="subcontent1">
+    <h1>Welcome to my Python/Django Projects page.</h1>
+    <hr>
+    <h1>Here, you will find some projects I built using Python and Django. When you are done reading about a specific
+        project, hit the python icon to access the project. The Git icon will take you to my github page where you can
+        see how i built the projects. Hope you like them.</h1>
+    <hr>
+
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="">
+            <img id="icon01" src='{% static "portfolio/images/python.png" %}' alt="pythonlogo"></a>
+        <a href="">
+            <img id="giticon" src='{% static "portfolio/images/githubimg.png" %}' alt="githubimage"></a>
+
+        <h1> <strong> MAKE A WISH!!</strong></h1>
+        <h3>In this first project, a user should be able to create, edit, update and delete an item.</h3>
+        <h3> It was bulit with django framework and deployed using Amazon EC2 Web Services.</h3>
+        <h3> A user should be able to signup and login with their newly created credentials. Please use the following
+            existing credentials if you are pressed for time:
+            Username: clakkle@yahoo.com PW: Clakkle#2019
+        </h3>
+        <hr>
+
+    </div>
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="">
+            <img id="icon02" src='{% static "portfolio/images/python.png" %}' alt="pythonlogo"></a>
+        <a href="">
+            <img id="giticon" src='{% static "portfolio/images/githubimg.png" %}' alt="githubimage"></a>
+        <h1><strong>WRITE A QUOTE</strong></h1>
+        <h3>In this second project, a user should be able to create, edit, update and delete an item as well.</h3>
+        <h3> It was bulit with django framework and deployed using Amazon EC2 Web Services.</h3>
+        <h3> One should be able to signup and login with their newly created credentials. Please use the following
+            existing credentials if you are pressed for time:
+            Username: clakkle@yahoo.com PW: Clakkle#2019
+        </h3>
+        <hr>
+    </div>
+
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="">
+            <img id="icon03" src='{% static "portfolio/images/python.png" %}' alt="pythonlogo"></a>
+        <a href="">
+            <img id="giticon" src='{% static "portfolio/images/githubimg.png" %}' alt="githubimage"></a>
+
+        <h1> <strong> MY PORTFOLIO SITE </strong></h1>
+        <h3>My third project is my portfolio site. You are currently on it. It links all the various projects in my
+            portfolio and was
+            bulit with django framework and deployed using Amazon EC2 Web Services as well</h3>
+        <hr>
+
+
+    </div>
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="">
+            <img id="icon04" src='{% static "portfolio/images/clakkle.png" %}' alt="clakklelogo"></a>
+        <a href="">
+            <img id="giticon" src='{% static "portfolio/images/githubimg.png" %}' alt="githubimage"></a>
+
+        <h1><strong> CLAKKLE </strong> </h1>
+        <h3>In this last project, a user should be able to create and delete an audio item. </h3>
+        <h3> It was bulit with django framework and deployed using Amazon EC2 Web Services.</h3>
+        <h3> One should be able to signup and login with newly created credentials. Please use the following
+            existing credentials if you are pressed for time::
+            Username: clakkle@yahoo.com PW: Clakkle#2019
+        </h3>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+{% block cameleon %}
+
+
+
+<script>
+    $(document).ready(function () {
+        //this first function inide the hover method
+        //is for when the mouse enters the element
+        $('div#hoverDiv').hover(function () {
+            //set multiple CSS properties at once
+            $(this).css({
+                'background-color': 'lightgrey',
+
+
+            });
+        }, function () {
+            //set multiple CSS properties at once
+            $(this).css({
+                'background-color': 'lightgrey',
+
+            });
+        });
+    });
+
+</script>
+
+{% endblock cameleon %}

@@ -1,0 +1,539 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+{% load staticfiles %}
+<style>
+    #mainimg0 {
+        width: 1110px;
+        height: 420px;
+        vertical-align: top;
+        margin: 0px 10px 10px 0px;
+        border-radius: 20px;
+    }
+
+
+    #icon01,
+    #icon02,
+    #icon03 {
+        display: inline-block;
+        height: 188px;
+        width: 188px;
+    }
+
+
+    .subcontent1a {
+
+        width: 364px;
+        height: 1200px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: rgba(26, 87, 202, 0.836);
+        padding: 10px 10x 10px 10px;
+        text-align: left;
+        border-radius: 10px;
+
+
+    }
+
+    .subcontent1a,
+    h6,
+    p {
+        padding: 10px 10x 10px 10px;
+        font-size: 21px;
+        text-align: center;
+        vertical-align: top;
+        color: white;
+        text-justify: auto;
+
+    }
+
+
+
+    .subcontent1,
+    .subcontent1a,
+    h3,
+    h6 {
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        margin-top: 5px;
+
+
+    }
+
+
+    .subcontent2a {
+        margin-top: 10px;
+        width: 364px;
+        height: 400px;
+        background-color: dodgerblue;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 10px;
+    }
+
+
+
+    .subcontent2,
+    .subcontent2a,
+    h4,
+    h5,
+    P {
+        color: white;
+        font-size: 21px;
+
+    }
+
+    @keyframes rotatez {
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    #icon01 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 1s 3 rotatez;
+    }
+
+    #icon02 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 2s 3 rotatez;
+    }
+
+    #icon03 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .5s ease-out 3s 3 rotatez;
+    }
+
+
+
+
+
+
+
+    @-webkit-keyframes bounce {
+
+        from,
+        20%,
+        53%,
+        80%,
+        to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        40%,
+        43% {
+            -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+        }
+
+        70% {
+            -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            -webkit-transform: translate3d(0, -15px, 0);
+            transform: translate3d(0, -15px, 0);
+        }
+
+        90% {
+            -webkit-transform: translate3d(0, -4px, 0);
+            transform: translate3d(0, -4px, 0);
+        }
+    }
+
+    @keyframes bounce {
+
+        from,
+        20%,
+        53%,
+        80%,
+        to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        40%,
+        43% {
+            -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+        }
+
+        70% {
+            -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            -webkit-transform: translate3d(0, -15px, 0);
+            transform: translate3d(0, -15px, 0);
+        }
+
+        90% {
+            -webkit-transform: translate3d(0, -4px, 0);
+            transform: translate3d(0, -4px, 0);
+        }
+    }
+
+    .bounce {
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+    }
+
+
+
+
+    #mainimg0 {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .8s ease-out .6s 1 bounce;
+    }
+
+
+
+
+
+
+
+
+
+    @keyframes flipOutY {
+        from {
+            -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+        }
+
+        30% {
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+            opacity: 1;
+        }
+
+        to {
+            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            opacity: 0;
+        }
+    }
+
+    .flipOutY {
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+        -webkit-backface-visibility: visible !important;
+        backface-visibility: visible !important;
+        -webkit-animation-name: flipOutY;
+        animation-name: flipOutY;
+    }
+
+
+
+
+
+    .subcontent2a {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: .7s ease-out .4s 6 flipOutY;
+    }
+
+
+
+    @-webkit-keyframes fadeInDown {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+
+
+
+    @-webkit-keyframes tada {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        10%,
+        20% {
+            -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        }
+
+        30%,
+        50%,
+        70%,
+        90% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+
+        40%,
+        60%,
+        80% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes tada {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        10%,
+        20% {
+            -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        }
+
+        30%,
+        50%,
+        70%,
+        90% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+
+        40%,
+        60%,
+        80% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .tada {
+        -webkit-animation-name: tada;
+        animation-name: tada;
+    }
+
+    .subcontent2a {
+        /* This section calls the slideInFromrightt animation we defined above */
+        animation: 3s ease-out .6s 1 tada;
+    }
+</style>
+
+
+<a href="">
+
+    <img id="mainimg0" src='{% static "portfolio/images/main_img.png" %}' alt="main_img">
+</a>
+
+<div id="subcontent1">
+
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="{% url 'portfolio:pyth' %}">
+
+
+            <img id="icon01" src='{% static "portfolio/images/python.png" %}' alt="pythonlogo">
+
+            <h3>Python/Django Projects</h3>
+            <h6>-These projects were built using python and Django frame work; some with full CRUD functionality,
+                RESTful
+                architectural style and SQLite database. A sign up form is employed for new users with
+                validations. Login cridentials are also provided for easy access</h6>
+            <h6> -Python has been
+                used judicuously to create the authentication method and attributes needed by the form login
+                mechanism. Django ORM was used for queries. MVC/MVT design pattern has been used to decouple
+                user-interface (Templates), data (model), and application logic (Views).</h6>
+            <h6>-Amazon Web Services'
+                EC2
+                technologies was used for deployment while making updates using Git Version Control System.
+                Front-End technologies may included HTML5, CSS3, jQuery, AJAX, and Bootstrap4 </h6>
+
+
+        </a>
+    </div>
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="{% url 'portfolio:sharp' %}">
+            <img id="icon02" src='{% static "portfolio/images/csharplogo.png" %}' alt="csharplogo">
+
+            <h3>C#/ASP.NET core Projects</h3>
+            <h6>-These projects were built using Csharp and ASP.Net core frame work with full CRUD
+                functionality
+                and
+                RESTful architectural style. A sign up form is employed as well for new users with
+                validations.Login cridentials are also provided for easy access.
+                Csharp has been used
+                judicuously to create the authentication method and attributes needed by the form login
+                mechanism.</h6>
+            <h6> -Lamda expressions and Entity Framework Core was the primary ORM employed. MYSQL Workbench
+                was
+                used to interact with the MySql databases and for deployment. MVC design pattern
+                has
+                been used to decouple user-interface (view), data (model), and application logic
+                (controller).
+            </h6>
+            <h6> -Amazon Web Services' EC2 technologies was used for deployment while making updates using
+                Git
+                Version
+                Control System. Front-End technologies may include HTML5, CSS3, jQuery, AJAX, and Bootstrap4
+            </h6>
+
+
+
+        </a>
+    </div>
+    <div id="hoverDiv" class="subcontent1a">
+        <a href="{% url 'portfolio:pyth' %}">
+            <img id="icon03" src='{% static "portfolio/images/clakkle.png" %}' alt="clakkle">
+
+            <h3>Python/Django Clakkle Project</h3>
+            <h6>This project is ongoing and in its intermedairy stage. It has been built using python and Django frame
+                work. Django authentication was employed. </h6>
+            <h6> The project entails recording original audio from a user and storing the recording in an sql-lite
+                database to be retrieved at anytime. Django ORM was used for queries. MVC/MVT design pattern has been
+                used to decouple user-interface (Templates), data (model), and application logic (Views).</h6>
+            <h6>Amazon Web Services'
+                EC2
+                technologies was used for deployment. </h6>
+            </h6>
+
+        </a>
+    </div>
+    <div>
+        <div id=subcontent2>
+            <div id="hoverDiv" class="subcontent2a">
+                <p> Python.
+                    Django frame work.
+                    CRUD functionality.
+                    RESTful architecture.
+                    SQLite database.
+                    Validations.
+                    Django ORM.
+                    MVC/MVT design pattern.
+                    Amazon EC2 Web Services.
+                    Git Version Control System.
+                    HTML5.
+                    CSS3(keyframes css library).
+                    jQuery.
+                    AJAX.
+                    Bootstrap4.
+                </p>
+
+
+
+            </div>
+            <div id="hoverDiv" class="subcontent2a">
+
+                <p>
+                    Csharp.
+                    ASP.NET core frame work.
+                    CRUD functionality.
+                    RESTful architecture.
+                    Validations.
+                    Lamda expressions.
+                    Entity Framework Core.
+                    MYSQL Workbench.
+                    MySql databases.
+                    MVC design pattern.
+                    Git Version Control System.
+                    HTML5.
+                    CSS3.
+                    AJAX.
+                    Bootstrap4.
+                </p>
+
+
+
+
+            </div>
+            <div id="hoverDiv" class="subcontent2a">
+
+                <p>
+                    Python.
+                    Django frame work.
+                    CRUD functionality.
+                    RESTful architecture.
+                    SQLite database.
+                    Validations.
+                    Django ORM.
+                    MVC/MVT design pattern.
+                    Amazon EC2 Web Services.
+                    Git Version Control System.
+                    HTML5.
+                    CSS3(keyframes css library.).
+                    jQuery.
+                    AJAX.
+                    Bootstrap4.
+                </p>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    {% endblock content %}
+
+    {% block cameleon %}
+
+
+
+    <script>
+        $(document).ready(function () {
+            //this first function inide the hover method
+            //is for when the mouse enters the element
+            $('div#hoverDiv').hover(function () {
+                //set multiple CSS properties at once
+                $(this).css({
+                    'background-color': 'blue',
+
+
+                });
+            }, function () {
+                //set multiple CSS properties at once
+                $(this).css({
+                    'background-color': 'grey',
+
+                });
+            });
+        });
+
+    </script>
+
+    {% endblock cameleon %}
