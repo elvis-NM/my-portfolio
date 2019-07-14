@@ -83,32 +83,24 @@
 
 
 
-        #footer,
-        a {
-
-            vertical-align: top;
+        footer.fixed-bottom,
+        dl,
+        dd {
             color: rgb(14, 81, 126);
+            display: inline-block;
+            vertical-align: top;
             text-align: center;
-            padding: 5px 30px 5px 0px;
+            padding: 2px 5px 2px 50px;
             font-size: 18px;
-        }
-
-
-
-
-        #footer {
-            background-color: rgb(210, 230, 248);
-
-            border-radius: 0px;
-            margin-top: 40px;
-
 
         }
 
-        .spans {
-            color: rgb(23, 95, 179);
-        }
 
+        footer.fixed-bottom {
+            background-color: azure;
+            width: auto;
+            height: 40px;
+        }
 
         #image001,
         #image002,
@@ -121,6 +113,8 @@
             height: 100px;
             width: 100px;
         }
+
+
 
         @-webkit-keyframes bounce {
 
@@ -264,7 +258,7 @@
         <h2>Elvis's <span class="spans">Portfolio</span></h2>
 
         <Ul id="header">
-            <a href="{% url 'portfolio:index' %}">
+            <a href="{% url 'portfolio:home' %}">
                 <li> <span class="spans">
                         Home
                     </span></li>
@@ -275,14 +269,14 @@
                     </span></li>
             </a>
 
-            <a href="{% url 'portfolio:pyth' %}">
+            <a href="{% url 'portfolio:python' %}">
                 <li> Python/Django </li>
             </a>
-            <a href="{% url 'portfolio:sharp' %}">
+            <a href="{% url 'portfolio:csharp' %}">
                 <li>C#/ASP.NETcore </li>
             </a>
         </Ul>
-        <a href="{% url 'portfolio:index' %}">
+        <a href="{% url 'portfolio:home' %}">
             <img id="image001" src='{% static "portfolio/images/python.png" %}' alt="python">
             <img id="image002" src='{% static "portfolio/images/csharplogo.png" %}' alt="csharplogo">
             <img id="image003" src='{% static "portfolio/images/clakkle.png" %}' alt="clakkle">
@@ -300,14 +294,23 @@
 
     <footer class="fixed-bottom">
 
-        <div id="footer">
-            <a href="{% url 'portfolio:index' %}"> Home </a>
-            <a href="{% url 'portfolio:about' %}"> About </a>
-            <a href="{% url 'portfolio:pyth' %}"> Python/Django</a>
-            <a href="{% url 'portfolio:sharp' %}"> C#/ASP.NETcore<a>
-                    <a href=""> Contact</a>
+        <dl id="footer">
+            <a href="{% url 'portfolio:home' %}">
+                <dd>Home </dd>
+            </a>
+            <a href="{% url 'portfolio:about' %}">
+                <dd>About </dd>
+            </a>
+            <a href="{% url 'portfolio:python' %}">
+                <dd>Python/Django</dd>
+            </a>
+            <a href="{% url 'portfolio:csharp' %}">
+                <dd>C#/ASP.NETcore</dd><a>
+                    <a href="{% url 'portfolio:Pdf' %}">
+                        <dd> Contact</dd>
+                    </a>
 
-        </div>
+        </dl>
 
 
     </footer>
